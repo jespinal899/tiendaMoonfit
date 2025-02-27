@@ -1,0 +1,177 @@
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background: rgba(255, 247, 247, 0.74);
+  position: relative;
+}
+
+/* Logo centrado */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logoEmpresa {
+  width: 180px;
+  height: auto;
+ 
+  object-fit: contain;
+}
+
+/* Iconos izquierda */
+.left-icons {
+  display: flex;
+  gap: 15px;
+  z-index: 1;
+}
+
+/* Iconos derecha */
+.right-icons {
+  display: flex;
+  gap: 15px;
+  z-index: 1;
+}
+
+.imagenCompras {
+  width: 30px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.imagenCompras:hover {
+  transform: scale(1.1);
+}
+
+
+.menuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: rgba(255, 247, 247, 0.74);
+  font-size: 15px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 120px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px; 
+  transition: all 0.3s ease;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Sección hero */
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-title, .hero-subtitle {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* Catálogo */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+}
+
+.producto {
+  width: 400px;
+  border: 0px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+  
+}
+
+
+
+
+.producto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+.inferioridad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.inferior {
+  color: white;
+  margin: 0;
+}
+
+/* Texto envío */
+.Envio {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #f8f8f8;
+  
+}
+.textoProducto{
+  padding: 10px;
+}

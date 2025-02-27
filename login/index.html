@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="/login" method="POST">
+        <h1>INICIAR SESIÓN</h1>
+
+        <label for="username">Ingresa tu usuario</label>
+        <input type="text" id="username" name="username" minlength="5" placeholder="Ingresa tu usuario" required>
+
+        <label for="password">Ingresa tu contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" minlength="4" required><br>
+        <br>
+        <button type="submit">Iniciar Sesión</button>
+
+        <p>¿No tienes una cuenta? <a href="#" id="show-register">Regístrate</a></p>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <div id="googleSignInButton"></div>
+    </form>
+
+    <form id="register-form" action="/register" method="POST" style="display: none;">
+        <h1>REGISTRARSE</h1>
+
+        <label for="new-username">Crea un usuario</label>
+        <input type="text" id="new-username" name="username" minlength="5" placeholder="Crea un usuario" required>
+
+        <label for="new-password">Crea una contraseña</label>
+        <input type="password" id="new-password" name="password" placeholder="Crea una contraseña" minlength="4" required><br>
+        <br>
+        <button type="submit">Registrarse</button>
+
+        <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Iniciar Sesión</a></p>
+
+   
+    </form>
+
+    <script>
+     
+        document.getElementById('show-register').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('register-form').style.display = 'none';
+            document.querySelector('form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
